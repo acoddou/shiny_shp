@@ -12,7 +12,7 @@ library(readr)
 archivo <- file.choose()
 
 # Importar los datos limpios desde 'data' como tibble
-datos <- read_csv(archivo, na = c("NA", "."))
+datos <- read_csv(archivo, na = c("NA", ".", ""))
 
 
 # Explorar los datos ------------------------------------------------------
