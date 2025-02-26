@@ -13,19 +13,3 @@ archivo <- file.choose()
 
 # Importar los datos limpios desde 'data' como tibble
 datos <- read_csv(archivo, na = c("NA", ".", ""))
-
-
-# Explorar los datos ------------------------------------------------------
-
-# 1. Ver los nombres de las columnas
-names(datos)
-
-# 2. Especificación del archivo (tipo de datos de las columnas)
-spec(datos)
-
-# 3. Estructura del tibble (muestra tipo y algunas filas)
-str(datos)
-
-# 4. Revisar problemas de los datos
-problems(datos)
-

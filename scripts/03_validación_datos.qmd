@@ -1,0 +1,70 @@
+---
+title: "04_validación_datos"
+format: html
+---
+
+```{r}
+#| label: paquetes
+#| warning: false
+
+library("tidyverse") #Transformación de datos
+library("readr")
+
+# Para validación de datos
+library(pointblank) 
+library(data.validator)
+library(assertr)
+library(validate)
+
+```
+
+### Carga de datos
+
+```{r}
+#| label: carga_datos
+
+glimpse(datos_limpios)
+
+```
+
+```{r}
+anyNA(datos_limpios)
+
+```
+
+```{r}
+datos_limpios |> 
+  summarize(across(everything(), ~ sum(is.na(.))))
+```
+```{r}
+son_numericas <- c("FC", "PWP", "sand", "silt", "clay", "bulk_density", "organic_matter")
+
+datos_limpios <- datos_limpios |> 
+  mutate(across(son_numericas,as.numeric))
+
+glimpse(datos_limpios)
+```
+
+## Testeo acumulativo
+
+```{r}
+datos_limpios |> 
+  assert(not_na,c("FC", "PWP", "sand", "silt", "clay", "bulk_density", "organic_matter"), error_fun = just_warn)
+```
+
+# con data.validator se incorpora assetr en un reporte
+```{r}
+reporte <- data_validation_report()
+
+validate(datos_limpios) |> 
+  validate_cols(not_na,c("FC", "PWP", "sand", "silt", "clay", "bulk_density", "organic_matter"), description = "Ver si hay NA")  |>  # Valores faltantes
+  
+  add_results(reporte) # Agregamos resultados al reporte
+
+
+# Exploramos un resumen de los resultados del reporte
+print(reporte) 
+
+save_report(reporte)
+```
+
