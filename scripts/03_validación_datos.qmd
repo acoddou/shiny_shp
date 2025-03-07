@@ -1,5 +1,5 @@
 ---
-title: "04_validación_datos"
+title: "03_validación_datos"
 format: html
 ---
 
@@ -36,6 +36,7 @@ anyNA(datos_limpios)
 datos_limpios |> 
   summarize(across(everything(), ~ sum(is.na(.))))
 ```
+
 ```{r}
 son_numericas <- c("FC", "PWP", "sand", "silt", "clay", "bulk_density", "organic_matter")
 
@@ -53,6 +54,7 @@ datos_limpios |>
 ```
 
 # con data.validator se incorpora assetr en un reporte
+
 ```{r}
 reporte <- data_validation_report()
 
@@ -67,4 +69,3 @@ print(reporte)
 
 save_report(reporte)
 ```
-

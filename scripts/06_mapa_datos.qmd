@@ -1,0 +1,38 @@
+---
+title: "06_mapa_datos"
+format: html
+---
+
+#librerias
+
+```{r}
+library(ggplot2)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(tidyverse)
+library(readr)
+
+```
+
+```{r}
+mapa <- datos_limpios
+
+```
+
+```{r}
+#Importar mapa de chile
+chile <- ne_countries(scale = "medium", returnclass = "sf") %>% 
+  filter(name == "Chile")
+```
+
+```{r}
+# Convertir a objeto sf
+data_sf <- st_as_sf(datos_limpios, coords = c("x", "y"), crs = 4326)
+```
+
+#mapa
+
+```{r}
+ggplot() + geom_sf(data = chile, fill = "gray90", color = "black") + geom_sf(data = data_sf, color = "red", size = 2) + theme_minimal() + coord_sf(xlim = c(-80, -65), ylim = c(-56, -17), expand = FALSE) + labs(title = "Mapa de Datos en Chile", x = "longitud", y = "latitud") + theme( axis.text.x = element_text(angle = 90, hjust = 1, size = 10), axis.text.y = element_text(angle = 0, hjust = 1, size = 10))
+```
