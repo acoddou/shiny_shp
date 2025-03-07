@@ -12,7 +12,8 @@ Usando el dataset [ChSPD Chilean soil profile database V2](https://zenodo.org/re
 5. Se disponibilizaron los resultados por medio de código abierto (este repositorio) y una Shiny App.
 
 ### Mapa de datos
-Se realizo un mapa con la ubicacion de los datos [Mapa de Chile](shiny_shp/mapa_chile.png)
+Se realizo un mapa con la ubicacion de los datos ![Mapa de Chile](images/mapa_chile.jpg)
 
 ### Agradecimientos
 Siempre poner!
+
