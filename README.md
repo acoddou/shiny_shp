@@ -11,5 +11,8 @@ Usando el dataset [ChSPD Chilean soil profile database V2](https://zenodo.org/re
 4. Se realizó una validación y testeo del dataset original usando las librerías pointblank, data.validator, assertr, validate.
 5. Se disponibilizaron los resultados por medio de código abierto (este repositorio) y una Shiny App.
 
+### Mapa de datos
+Se realizo un mapa con la ubicacion de los datos [Mapa de Chile](shiny_shp/mapa_chile.png)
+
 ### Agradecimientos
 Siempre poner!
