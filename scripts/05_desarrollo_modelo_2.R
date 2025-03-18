@@ -76,6 +76,6 @@ final_fit_pwp <- final_model_pwp %>%
   fit(PWP ~ sand + silt + clay + bulk_density + organic_matter, data = new_train)
 
 # Guardar los modelos entrenados
-saveRDS(final_fit_fc, "modelo_fc.rds")
-saveRDS(final_fit_pwp, "modelo_pwp.rds")
+saveRDS(final_fit_fc, "shinyapp/modelos/modelo_fc.rds")
+saveRDS(final_fit_pwp, "shinyapp/modelos/modelo_pwp.rds")
 

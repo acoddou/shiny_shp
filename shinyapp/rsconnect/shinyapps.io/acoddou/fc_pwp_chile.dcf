@@ -1,0 +1,12 @@
+name: fc_pwp_chile
+title: fc_pwp_chile
+username: acoddou
+account: acoddou
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14249357
+bundleId: 9962901
+url: https://acoddou.shinyapps.io/fc_pwp_chile/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

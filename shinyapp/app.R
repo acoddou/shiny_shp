@@ -1,14 +1,12 @@
 # Librerías
 library(shiny)
 library(parsnip)  # Para usar los modelos entrenados
-
-# Asegurarse de que los modelos existen en la sesión
-if (!exists("modelo_fc") | !exists("modelo_pwp")) {
-  stop("Los modelos no están cargados en la sesión. Ejecuta el script que los crea antes de correr la app.")
-}
+library(ranger) #para evitar error en logs de shiny
 
 # Server Shiny ------------------------------------------------------------
 server <- function(input, output) {
+  modelo_fc <- readRDS("modelo_fc.rds")
+  modelo_pwp <- readRDS("modelo_pwp.rds")
   
   # Predicción de Field Capacity (FC)
   output$WRfc <- renderText({
