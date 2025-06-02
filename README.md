@@ -50,4 +50,4 @@ Las contribuciones son bienvenidas. Si encuentras algún error o tienes alguna s
 
 ### Agradecimientos
 
-Se agradece especialmente a [Sara Acevedo](%5BSaryace%20(Sara%20Acevedo)%5D(https://github.com/Saryace)) por su valioso apoyo y guía, mostrando de manera clara y didáctica los principios de la programación. Asimismo, se extiende un agradecimiento a [R-Ladies Buenos Aires](#0){style="font-size: 11pt;"} por sus talleres de programación.
+Se agradece especialmente a [Sara Acevedo](%5BSaryace%20(Sara%20Acevedo)%5D(https://github.com/Saryace)) por su valioso apoyo y guía, mostrando de manera clara y didáctica los principios de la programación. Asimismo, se extiende un agradecimiento a [R-Ladies Buenos Aires] por sus talleres de programación.
